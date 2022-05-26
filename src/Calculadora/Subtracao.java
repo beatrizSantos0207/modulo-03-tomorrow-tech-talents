@@ -13,7 +13,11 @@ public class  Subtracao implements ICalculo {
     public  double calcularLista(List<Double> numeros) {
         double subtracao = 0;
         for (Double numero : numeros) {
-            subtracao = subtracao - numero;
+            if (numeros.indexOf(numero) == 0) {
+                subtracao = numero;
+            } else {
+                subtracao = subtracao - numero;
+            }
         }
         return subtracao;
     }
